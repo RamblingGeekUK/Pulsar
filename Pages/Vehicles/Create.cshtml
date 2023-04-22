@@ -1,0 +1,69 @@
+﻿@page
+@model Pulsar.Pages.Vehicles.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Vechicles</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Vechicles.dateTime" class="control-label"></label>
+                <input asp-for="Vechicles.dateTime" class="form-control" />
+                <span asp-validation-for="Vechicles.dateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechicles.Name" class="control-label"></label>
+                <input asp-for="Vechicles.Name" class="form-control" />
+                <span asp-validation-for="Vechicles.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechicles.Speed" class="control-label"></label>
+                <input asp-for="Vechicles.Speed" class="form-control" />
+                <span asp-validation-for="Vechicles.Speed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechicles.SpeedTime" class="control-label"></label>
+                <input asp-for="Vechicles.SpeedTime" class="form-control" />
+                <span asp-validation-for="Vechicles.SpeedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechicles.NumberOfBoost" class="control-label"></label>
+                <input asp-for="Vechicles.NumberOfBoost" class="form-control" />
+                <span asp-validation-for="Vechicles.NumberOfBoost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechicles.OverallRating" class="control-label"></label>
+                <input asp-for="Vechicles.OverallRating" class="form-control" />
+                <span asp-validation-for="Vechicles.OverallRating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechicles.Rarity" class="control-label"></label>
+                <input asp-for="Vechicles.Rarity" class="form-control" />
+                <span asp-validation-for="Vechicles.Rarity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vechicles.ImageUrl" class="control-label"></label>
+                <input asp-for="Vechicles.ImageUrl" class="form-control" />
+                <span asp-validation-for="Vechicles.ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

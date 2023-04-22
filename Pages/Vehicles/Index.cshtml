@@ -1,0 +1,52 @@
+﻿@page
+@model Pulsar.Pages.Vehicles.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<div class="row row-cols-1 row-cols-md-4 g-4" data-bs-theme="blue">
+    
+
+    @foreach (var item in Model.Vechicles)
+    {
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card" style="width: 18rem;">
+                    <img src=@Html.DisplayFor(modelItem => item.ImageUrl) class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h3>
+
+                        @Html.DisplayNameFor(model => model.Vechicles[0].Speed)
+                        <div class="progress" style="height: 25px;" role="progressbar" aria-label="Basic example" aria-valuenow=@item.Speed aria-valuemin="0" aria-valuemax="10">
+                            <div class="progress-bar bg-success" style="width: @item.Speed%">@Html.DisplayFor(modelItem => item.Speed)</div>
+                        </div>
+                        
+                        @Html.DisplayNameFor(model => model.Vechicles[0].SpeedTime)
+                        <div class="progress" style="height: 25px;" role="progressbar" aria-label="Basic example" aria-valuenow=@item.SpeedTime aria-valuemin="0" aria-valuemax="10">
+                            <div class="progress-bar bg-info" style="width: @item.SpeedTime%">@Html.DisplayFor(modelItem => item.SpeedTime)</div>
+                        </div>
+                        
+                        @Html.DisplayNameFor(model => model.Vechicles[0].NumberOfBoost)
+                        <div class="progress" style="height: 25px;" role="progressbar" aria-label="Basic example" aria-valuenow=@item.NumberOfBoost aria-valuemin="0" aria-valuemax="10">
+                            <div class="progress-bar" style="width: @item.NumberOfBoost%">@Html.DisplayFor(modelItem => item.NumberOfBoost)</div>
+                        </div>
+                        
+                        @Html.DisplayNameFor(model => model.Vechicles[0].Rarity)
+                        <div class="progress" style="height: 25px;" role="progressbar" aria-label="Basic example" aria-valuenow=@item.Rarity aria-valuemin="0" aria-valuemax="10">
+                            <div class="progress-bar" style="width: @item.Rarity%">@Html.DisplayFor(modelItem => item.Rarity)</div>
+                        </div>
+                        <br/>
+                        
+
+                        
+                        <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-primary">Data</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

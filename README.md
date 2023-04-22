@@ -1,3 +1,7 @@
 # Pulsar
 
-A small game webiste that my son wanted coding up
+A small game website that my son wanted building.
+
+# Purpose
+
+No Idea 😀

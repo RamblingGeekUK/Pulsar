@@ -30,9 +30,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-page="/Vehicles/index">Vehicles</a>
                         </li>
-                        <li class="nav-item">
+                        @*<li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
+                        </li>*@
                     </ul>
                 </div>
             </div>
@@ -40,17 +40,16 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            
             @RenderBody()
         </main>
     </div>
-    </div>
-    <footer class="border-top footer text-muted">
+
+    <footer class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <div class="container">
-            &copy; 2023 - Pulsar - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2023 - Pulsar
         </div>
     </footer>
-
+</div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
